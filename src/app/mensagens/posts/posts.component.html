@@ -1,0 +1,8 @@
+<mat-form-field>
+  <input size="50" matInput [(ngModel)]="mensagem.texto">
+</mat-form-field>
+
+<button mat-button (click)="enviarMensagem()">Publicar</button>
+<ul>
+  <li *ngFor="let mensagem of mensagens">{{mensagem}}</li>
+</ul>

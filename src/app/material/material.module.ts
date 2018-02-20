@@ -9,7 +9,7 @@ import {MatButtonModule, MatFormFieldModule, MatInputModule} from '@angular/mate
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
   ],
   exports: [
     CommonModule,

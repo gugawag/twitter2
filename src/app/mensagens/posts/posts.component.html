@@ -1,8 +1,34 @@
 <mat-form-field>
-  <input size="50" matInput [(ngModel)]="mensagem.texto">
+  <input size="50" matInput [(ngModel)]="post.mensagem">
 </mat-form-field>
 
-<button mat-button (click)="enviarMensagem()">Publicar</button>
-<ul>
-  <li *ngFor="let mensagem of mensagens">{{mensagem}}</li>
-</ul>
+<button mat-mini-fab (click)="enviarMensagem()">
+  <mat-icon>send</mat-icon>
+</button>
+
+<mat-form-field>
+  <input size="50" matInput [(ngModel)]="usuario" (change)="getPostsDoUsuario()">
+</mat-form-field>
+
+<div class="row">
+  <div class="column" style="background-color: beige">
+    Posts gerais
+    <mat-card-content>
+      <mat-card *ngFor="let post of posts | async"><label (click)="apagarMensagem(post)">{{post.mensagem}}</label></mat-card>
+    </mat-card-content>
+  </div>
+  <div class="column" style="background-color: aliceblue">
+    Posts Sábado temático:
+    <ul>
+      <li *ngFor="let post of postsM | async">{{post.mensagem}}</li>
+    </ul>
+  </div>
+
+  <div class="column" style="background-color: antiquewhite">
+    Mensagems diretas:
+    <ul>
+      <li *ngFor="let post of postsDoUsuario| async">{{post.mensagem}}</li>
+    </ul>
+  </div>
+
+</div>

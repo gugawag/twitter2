@@ -4,6 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {MaterialModule} from './material/material.module';
 import {MensagensModule} from './mensagens/mensagens.module';
+import {FirebaseModule} from './firebase/firebase.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {MensagensModule} from './mensagens/mensagens.module';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    MensagensModule
+    MensagensModule,
+    FirebaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

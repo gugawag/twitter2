@@ -7,8 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href=https://fonts.googleapis.com/icon?family=Material+Icons rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>
 </body>
 </html>
+
+<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB8RC-U2ogJ-q8vUzaa9n-42kq-_FrPSd4",
+    authDomain: "twitter2-ifpb.firebaseapp.com",
+    databaseURL: "https://twitter2-ifpb.firebaseio.com",
+    projectId: "twitter2-ifpb",
+    storageBucket: "twitter2-ifpb.appspot.com",
+    messagingSenderId: "445426715416"
+  };
+  firebase.initializeApp(config);
+</script>
